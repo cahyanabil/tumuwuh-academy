@@ -126,28 +126,12 @@ const steps = [
           <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#173F35]/60">Program</p>
           <h2 class="mt-3 text-3xl font-bold text-[#173F35] sm:text-4xl">Kembangkan kemampuan, satu langkah demi satu langkah.</h2>
         </div>
-        <a href="/reservasi" class="text-sm font-semibold text-[#173F35] underline decoration-[#D5E6A5] underline-offset-4">
-          Lihat semua program
-        </a>
       </div>
 
       <div class="mt-10 grid gap-6 xl:grid-cols-3">
         {featuredPrograms.map((program) => <ProgramCard program={program} />)}
       </div>
 
-      <div class="mt-10 rounded-[28px] border border-dashed border-[#173F35]/20 bg-[#F7F5EF] p-8">
-        <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-          <div>
-            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#173F35]/60">Status program</p>
-            <h3 class="mt-2 text-2xl font-bold text-[#173F35]">Kategori tersedia, sedang dibuka, dan potensi masa depan.</h3>
-          </div>
-          <ul class="grid gap-2 text-sm text-[#173F35]/70 sm:grid-cols-3">
-            <li class="rounded-full border border-[#173F35]/10 bg-white px-3 py-2 text-center">Data Analytics</li>
-            <li class="rounded-full border border-[#173F35]/10 bg-white px-3 py-2 text-center">Data Science</li>
-            <li class="rounded-full border border-[#173F35]/10 bg-white px-3 py-2 text-center">Digital Marketing</li>
-          </ul>
-        </div>
-      </div>
     </section>
 
     <section class="bg-[#102D27] py-20 text-[#F7F5EF]">
