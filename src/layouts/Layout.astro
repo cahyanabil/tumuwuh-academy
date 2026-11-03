@@ -1,0 +1,27 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Tumuwuh — Learning Community',
+  description = 'Tumuwuh adalah ruang belajar kolaboratif untuk berbagi pengetahuan, mengembangkan keterampilan, dan bertumbuh bersama melalui pengalaman belajar yang bermakna.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-[#F7F5EF] text-[#102D27] antialiased">
+    <slot />
+  </body>
+</html>

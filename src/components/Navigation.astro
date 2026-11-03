@@ -1,0 +1,49 @@
+---
+const navItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Tentang Kami', href: '#about' },
+  { label: 'Program', href: '#programs' },
+  { label: 'Kolaborator', href: '#collaborators' },
+];
+---
+
+<header class="sticky top-0 z-50 border-b border-[#173F35]/10 bg-[#F7F5EF]/90 backdrop-blur-sm">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+    <a href="/" class="flex items-center gap-3" aria-label="Tumuwuh homepage">
+      <div class="flex h-10 w-10 items-center justify-center rounded-full border border-[#173F35] bg-[#173F35] text-sm font-bold text-[#F7F5EF]">
+        T
+      </div>
+      <div>
+        <div class="text-lg font-extrabold tracking-[0.2em] text-[#173F35]">TUMUWUH</div>
+      </div>
+    </a>
+
+    <nav class="hidden items-center gap-8 text-sm font-medium text-[#173F35] md:flex">
+      {navItems.map((item) => (
+        <a href={item.href} class="transition-colors hover:text-[#102D27]">{item.label}</a>
+      ))}
+    </nav>
+
+    <div class="hidden md:block">
+      <a
+        href="/reservasi"
+        class="inline-flex items-center justify-center rounded-full border border-[#173F35] bg-[#173F35] px-5 py-2.5 text-sm font-semibold text-[#F7F5EF] transition-transform hover:-translate-y-0.5"
+      >
+        Ikuti Program
+      </a>
+    </div>
+
+    <button
+      class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#173F35]/20 bg-white md:hidden"
+      type="button"
+      aria-label="Open menu"
+    >
+      <span class="sr-only">Open navigation</span>
+      <span class="flex flex-col gap-1.5">
+        <span class="block h-0.5 w-5 bg-[#173F35]"></span>
+        <span class="block h-0.5 w-5 bg-[#173F35]"></span>
+        <span class="block h-0.5 w-5 bg-[#173F35]"></span>
+      </span>
+    </button>
+  </div>
+</header>

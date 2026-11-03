@@ -1,0 +1,247 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import ProgramCard from '../components/ProgramCard.astro';
+import CollaboratorCard from '../components/CollaboratorCard.astro';
+import { collaboratorPlaceholders, faqItems, programs } from '../data/programs';
+
+const featuredPrograms = programs.slice(0, 3);
+const principles = [
+  {
+    title: 'Learn Together',
+    description: 'Belajar menjadi lebih bermakna ketika pengetahuan dibagikan dan didiskusikan bersama.',
+  },
+  {
+    title: 'Grow Together',
+    description: 'Setiap individu memiliki kesempatan untuk berkembang melalui proses yang konsisten.',
+  },
+  {
+    title: 'Share Knowledge',
+    description: 'Pengalaman dan keahlian bukan hanya untuk dimiliki, tetapi juga untuk dibagikan.',
+  },
+];
+
+const steps = [
+  'Explore Programs',
+  'Choose Your Learning Program',
+  'Submit Your Reservation',
+  'Receive Confirmation',
+  'Learn and Grow Together',
+];
+---
+
+<Layout title="Tumuwuh — Learning Community" description="Tumuwuh adalah ruang belajar kolaboratif untuk berbagi pengetahuan, mengembangkan keterampilan, dan bertumbuh bersama.">
+  <Navigation />
+
+  <main>
+    <section class="mx-auto max-w-7xl px-4 pb-20 pt-12 sm:px-6 lg:px-8 lg:pb-28 lg:pt-16">
+      <div class="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+        <div>
+          <span class="inline-flex items-center rounded-full border border-[#173F35]/15 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#173F35]">
+            #BeBetterTogether
+          </span>
+          <h1 class="mt-6 max-w-xl text-4xl font-extrabold leading-[1.08] text-[#173F35] sm:text-5xl lg:text-6xl">
+            Tumbuh Bersama,<br />Belajar Tanpa Batas.
+          </h1>
+          <p class="mt-6 max-w-lg text-base leading-8 text-[#173F35]/75 sm:text-lg">
+            Tumuwuh adalah ruang belajar kolaboratif untuk berbagi pengetahuan, mengembangkan keterampilan, dan bertumbuh bersama melalui pengalaman belajar yang bermakna.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#programs" class="inline-flex items-center justify-center rounded-full bg-[#173F35] px-6 py-3 text-sm font-semibold text-[#F7F5EF] transition-transform hover:-translate-y-0.5">
+              Jelajahi Program
+            </a>
+            <a href="#about" class="inline-flex items-center justify-center rounded-full border border-[#173F35]/15 bg-white px-6 py-3 text-sm font-semibold text-[#173F35] transition-colors hover:border-[#173F35]/30">
+              Kenali Tumuwuh
+            </a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -left-6 top-10 h-28 w-28 rounded-full bg-[#D5E6A5]/70 blur-3xl"></div>
+          <div class="absolute -right-4 bottom-6 h-32 w-32 rounded-full bg-[#A9BBA8]/40 blur-3xl"></div>
+
+          <div class="relative overflow-hidden rounded-[32px] border border-[#173F35]/10 bg-[#173F35] p-6 shadow-[0_35px_90px_rgba(16,45,39,0.18)]">
+            <div class="rounded-[24px] border border-white/10 bg-[#102D27] p-6 text-[#F7F5EF]">
+              <div class="flex items-center justify-between text-xs font-medium uppercase tracking-[0.18em] text-[#D5E6A5]">
+                <span>Learning Community</span>
+                <span>2026</span>
+              </div>
+
+              <div class="mt-8 space-y-5">
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p class="text-xs uppercase tracking-[0.2em] text-[#D5E6A5]">Focus</p>
+                  <p class="mt-2 text-2xl font-bold">Kolaborasi & pertumbuhan</p>
+                </div>
+
+                <div class="grid gap-4 sm:grid-cols-2">
+                  <div class="rounded-2xl border border-white/10 bg-[#F7F5EF] p-4 text-[#173F35]">
+                    <p class="text-xs uppercase tracking-[0.18em] text-[#173F35]/60">Program</p>
+                    <p class="mt-2 text-3xl font-extrabold">3</p>
+                    <p class="mt-1 text-sm text-[#173F35]/70">kategori utama</p>
+                  </div>
+                  <div class="rounded-2xl border border-white/10 bg-[#F7F5EF] p-4 text-[#173F35]">
+                    <p class="text-xs uppercase tracking-[0.18em] text-[#173F35]/60">Komunitas</p>
+                    <p class="mt-2 text-3xl font-extrabold">∞</p>
+                    <p class="mt-1 text-sm text-[#173F35]/70">potensi kolaborasi</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="border-t border-[#173F35]/10 bg-white/60">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#173F35]/60">Tentang Tumuwuh</p>
+          <h2 class="mt-4 text-3xl font-bold tracking-tight text-[#173F35] sm:text-4xl">Belajar Tidak Harus Sendiri.</h2>
+        </div>
+
+        <div class="mt-10 grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div class="rounded-[30px] border border-[#173F35]/10 bg-[#F7F5EF] p-8">
+            <p class="text-base leading-8 text-[#173F35]/80">
+              Tumuwuh hadir sebagai ruang untuk mempertemukan individu yang ingin belajar, berbagi, dan berkembang. Dimulai dari bidang yang dikuasai pendirinya, Tumuwuh akan terus berkembang melalui kontribusi para kolaborator.
+            </p>
+          </div>
+
+          <div class="grid gap-5 sm:grid-cols-3">
+            {principles.map((principle) => (
+              <div class="rounded-[24px] border border-[#173F35]/10 bg-white p-6">
+                <div class="mb-4 h-12 w-12 rounded-full bg-[#D5E6A5]" />
+                <h3 class="text-xl font-bold text-[#173F35]">{principle.title}</h3>
+                <p class="mt-3 text-sm leading-7 text-[#173F35]/70">{principle.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="programs" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#173F35]/60">Program</p>
+          <h2 class="mt-3 text-3xl font-bold text-[#173F35] sm:text-4xl">Kembangkan kemampuan, satu langkah demi satu langkah.</h2>
+        </div>
+        <a href="/reservasi" class="text-sm font-semibold text-[#173F35] underline decoration-[#D5E6A5] underline-offset-4">
+          Lihat semua program
+        </a>
+      </div>
+
+      <div class="mt-10 grid gap-6 xl:grid-cols-3">
+        {featuredPrograms.map((program) => <ProgramCard program={program} />)}
+      </div>
+
+      <div class="mt-10 rounded-[28px] border border-dashed border-[#173F35]/20 bg-[#F7F5EF] p-8">
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#173F35]/60">Status program</p>
+            <h3 class="mt-2 text-2xl font-bold text-[#173F35]">Kategori tersedia, sedang dibuka, dan potensi masa depan.</h3>
+          </div>
+          <ul class="grid gap-2 text-sm text-[#173F35]/70 sm:grid-cols-3">
+            <li class="rounded-full border border-[#173F35]/10 bg-white px-3 py-2 text-center">Data Analytics</li>
+            <li class="rounded-full border border-[#173F35]/10 bg-white px-3 py-2 text-center">Data Science</li>
+            <li class="rounded-full border border-[#173F35]/10 bg-white px-3 py-2 text-center">Digital Marketing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#102D27] py-20 text-[#F7F5EF]">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#D5E6A5]">Berawal dari satu langkah</p>
+            <h2 class="mt-4 text-3xl font-bold sm:text-4xl">Berawal dari Satu Langkah.</h2>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-[0.8fr_1.2fr]">
+            <div class="rounded-[28px] border border-white/10 bg-white/5 p-5">
+              <div class="flex h-40 items-center justify-center rounded-[20px] border border-dashed border-white/20 bg-[#F7F5EF]/5 text-sm uppercase tracking-[0.2em] text-[#D5E6A5]">
+                Founder Photo
+              </div>
+            </div>
+            <div class="rounded-[28px] border border-white/10 bg-white/5 p-6">
+              <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#D5E6A5]">Muhammad Cahya Nabil</p>
+              <p class="mt-5 text-base leading-8 text-[#F7F5EF]/80">
+                Tumuwuh diinisiasi oleh Muhammad Cahya Nabil sebagai ruang untuk membagikan pengetahuan dan pengalaman yang telah dipelajari, sekaligus membuka kesempatan bagi lebih banyak individu untuk saling berkontribusi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="collaborators" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#173F35]/60">Kolaborator</p>
+        <h2 class="mt-4 text-3xl font-bold text-[#173F35] sm:text-4xl">Ruang untuk Bertumbuh Bersama.</h2>
+        <p class="mt-5 text-base leading-8 text-[#173F35]/75">
+          Tumuwuh terbuka bagi individu yang ingin membagikan keahlian dan berkontribusi dalam membangun ruang belajar yang inklusif dan kolaboratif.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        {collaboratorPlaceholders.map((person) => (
+          <CollaboratorCard name={person.name} field={person.field} description={person.description} />
+        ))}
+      </div>
+    </section>
+
+    <section class="bg-[#F7F5EF] py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#173F35]/60">Cara bergabung</p>
+          <h2 class="mt-4 text-3xl font-bold text-[#173F35] sm:text-4xl">Bagaimana Tumuwuh bekerja.</h2>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
+          {steps.map((step, index) => (
+            <div class="rounded-[24px] border border-[#173F35]/10 bg-white p-5">
+              <div class="mb-5 flex h-10 w-10 items-center justify-center rounded-full bg-[#D5E6A5] text-sm font-bold text-[#173F35]">
+                {index + 1}
+              </div>
+              <p class="text-base font-semibold text-[#173F35]">{step}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#173F35]/60">FAQ</p>
+        <h2 class="mt-4 text-3xl font-bold text-[#173F35] sm:text-4xl">Pertanyaan yang sering diajukan.</h2>
+      </div>
+
+      <div class="mt-10 grid gap-4">
+        {faqItems.map((item) => (
+          <details class="group rounded-[24px] border border-[#173F35]/10 bg-white p-5 text-left open:bg-[#F7F5EF]" open={item.question === 'Apa itu Tumuwuh?'}>
+            <summary class="cursor-pointer list-none text-lg font-semibold text-[#173F35]">
+              {item.question}
+            </summary>
+            <p class="mt-4 text-sm leading-7 text-[#173F35]/75">{item.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="bg-[#173F35] py-20 text-[#F7F5EF]">
+      <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#D5E6A5]">Setiap pertumbuhan</p>
+        <h2 class="mt-4 text-3xl font-bold sm:text-5xl">Setiap Pertumbuhan Dimulai dari Kesempatan.</h2>
+        <p class="mx-auto mt-6 max-w-2xl text-base leading-8 text-[#F7F5EF]/80">
+          Temukan ruang belajarmu dan mulai bertumbuh bersama Tumuwuh.
+        </p>
+        <a href="#programs" class="mt-8 inline-flex items-center justify-center rounded-full bg-[#D5E6A5] px-6 py-3 text-sm font-semibold text-[#173F35] transition-transform hover:-translate-y-0.5">
+          Lihat Program
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

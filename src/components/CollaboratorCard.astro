@@ -1,0 +1,18 @@
+---
+interface Props {
+  name: string;
+  field: string;
+  description: string;
+}
+
+const { name, field, description } = Astro.props;
+---
+
+<div class="rounded-[28px] border border-[#173F35]/10 bg-[#F7F5EF] p-6">
+  <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-full border border-[#173F35]/10 bg-white text-lg font-bold text-[#173F35]">
+    {name.charAt(0)}
+  </div>
+  <p class="text-sm font-semibold uppercase tracking-[0.14em] text-[#173F35]/60">{field}</p>
+  <h3 class="mt-3 text-xl font-bold text-[#173F35]">{name}</h3>
+  <p class="mt-3 text-sm leading-7 text-[#173F35]/70">{description}</p>
+</div>
