@@ -47,14 +47,6 @@ const steps = [
           <p class="mt-6 max-w-lg text-base leading-8 text-[#173F35]/75 sm:text-lg">
             Tumuwuh adalah ruang belajar kolaboratif untuk berbagi pengetahuan, mengembangkan keterampilan, dan bertumbuh bersama melalui pengalaman belajar yang bermakna.
           </p>
-          <div class="mt-8 flex flex-wrap gap-4">
-            <a href="#programs" class="inline-flex items-center justify-center rounded-full bg-[#173F35] px-6 py-3 text-sm font-semibold text-[#F7F5EF] transition-transform hover:-translate-y-0.5">
-              Jelajahi Program
-            </a>
-            <a href="#about" class="inline-flex items-center justify-center rounded-full border border-[#173F35]/15 bg-white px-6 py-3 text-sm font-semibold text-[#173F35] transition-colors hover:border-[#173F35]/30">
-              Kenali Tumuwuh
-            </a>
-          </div>
         </div>
 
         <div class="relative">
@@ -131,7 +123,18 @@ const steps = [
       <div class="mt-10 grid gap-6 xl:grid-cols-3">
         {featuredPrograms.map((program) => <ProgramCard program={program} />)}
       </div>
-
+      {featuredPrograms[0] && (
+        <div class="mt-8 text-center">
+          <a
+            href={featuredPrograms[0].reservationUrl}
+            target="_blank"
+            rel="noreferrer"
+            class="inline-flex items-center justify-center rounded-full border border-[#173F35] bg-[#173F35] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#102D27]"
+          >
+            Ikuti Program
+          </a>
+        </div>
+      )}
     </section>
 
     <section class="bg-[#102D27] px-4 py-16 text-center text-[#F7F5EF] sm:px-6 lg:px-8">
@@ -141,9 +144,14 @@ const steps = [
         <p class="mx-auto mt-5 max-w-2xl text-base leading-8 text-[#F7F5EF]/80">
           Tumuwuh berfokus pada belajar bersama, berbagi pengetahuan, dan bertumbuh secara kolaboratif. Tidak ada kelas khusus lanjutan berbayar. Siapa pun yang ingin berkontribusi dipersilakan bergabung.
         </p>
-        <a href="https://form.typeform.com/to/z8u1ItM8" class="mt-8 inline-flex items-center justify-center rounded-full bg-[#D5E6A5] px-6 py-3 text-sm font-semibold text-[#173F35] transition-transform hover:-translate-y-0.5">
-          Jadi Kontributor
-        </a>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="https://form.typeform.com/to/z8u1ItM8" class="inline-flex items-center justify-center rounded-full bg-[#D5E6A5] px-6 py-3 text-sm font-semibold text-[#173F35] transition-transform hover:-translate-y-0.5">
+            Jadi Kontributor
+          </a>
+          <a href="#programs" class="inline-flex items-center justify-center rounded-full border border-[#F7F5EF]/30 px-6 py-3 text-sm font-semibold text-[#F7F5EF] transition-colors hover:bg-white/10">
+            Jelajahi Program
+          </a>
+        </div>
       </div>
     </section>
 

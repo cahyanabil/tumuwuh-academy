@@ -8,7 +8,7 @@ const navItems = [
 ---
 
 <header class="sticky top-0 z-50 border-b border-[#173F35]/10 bg-[#F7F5EF]/90 backdrop-blur-sm">
-  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+  <div class="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
     <a href="/" class="flex items-center" aria-label="Tumuwuh homepage">
       <div class="text-lg font-extrabold tracking-[0.2em] text-[#173F35]">TUMUWUH</div>
     </a>
@@ -19,14 +19,23 @@ const navItems = [
       ))}
     </nav>
 
-    <div class="hidden md:block">
-      <a
-        href="/reservasi"
-        class="inline-flex items-center justify-center rounded-full border border-[#173F35] bg-[#173F35] px-5 py-2.5 text-sm font-semibold text-[#F7F5EF] transition-transform hover:-translate-y-0.5"
+    <details class="relative md:hidden">
+      <summary
+        aria-label="Buka menu navigasi"
+        class="flex h-10 w-10 cursor-pointer list-none flex-col items-center justify-center gap-1.5 rounded-lg text-[#173F35] hover:bg-[#173F35]/5 [&::-webkit-details-marker]:hidden"
       >
-        Ikuti Program
-      </a>
-    </div>
+        <span class="h-0.5 w-6 rounded-full bg-current"></span>
+        <span class="h-0.5 w-6 rounded-full bg-current"></span>
+        <span class="h-0.5 w-6 rounded-full bg-current"></span>
+      </summary>
+      <nav class="absolute right-0 top-full z-50 mt-2 w-56 rounded-2xl border border-[#173F35]/10 bg-[#F7F5EF] p-3 shadow-lg">
+        <div class="flex flex-col gap-1 text-sm font-medium text-[#173F35]">
+          {navItems.map((item) => (
+            <a href={item.href} class="rounded-xl px-3 py-2.5 transition-colors hover:bg-[#173F35]/5">{item.label}</a>
+          ))}
+        </div>
+      </nav>
+    </details>
 
   </div>
 </header>
